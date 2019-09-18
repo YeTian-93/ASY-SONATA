@@ -1,4 +1,4 @@
-function directed_graph_generator(I, N_outneighbor)
+function [C, R, Adj] = directed_graph_generator(I, N_outneighbor)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % This code generates a directed graph.
 % 
@@ -9,7 +9,6 @@ function directed_graph_generator(I, N_outneighbor)
 %%%% A circle graph %%%%
 Adj = diag(ones(1,I-1), -1);
 Adj(1,I) = 1;
-% Adj = Adj + eye(I);
 
 %%%% Add edge randomly %%%%
 for i = 1:I
@@ -28,4 +27,4 @@ end
 C = (Adj+eye(I)) * diag(1./sum(Adj+eye(I)));
 R = diag(1./sum(Adj+eye(I), 2)) * (Adj+eye(I));
 fprintf('The directed graph is generated.\n');
-save('directed_graph.mat', 'C', 'R', 'Adj')
+% save('directed_graph.mat', 'C', 'R', 'Adj')

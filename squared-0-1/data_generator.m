@@ -1,6 +1,22 @@
 function data_generator(Num_Nodes)
 
-load('raw_data.mat');
+text  = fileread('processed.cleveland.data');
+lines = strread(text, '%s','delimiter','\n');
+data  = zeros(1,14);
+k     = 1;
+
+for l = 1:length(lines)
+    temp = str2num(cell2mat(lines(l)));
+    if ~isempty(temp)
+        data(k,:) = temp;
+        if data(k,end) == 0
+            data(k,end) = -1.0;
+        else
+            data(k,end) = 1.0;
+        end
+        k = k+1;
+    end
+end
 
 [n_samp, col] = size(data);
 features      = data(:,1:end-1);
@@ -26,3 +42,4 @@ v{Num_Nodes} = v_stack(n_loc_samp*(Num_Nodes-1)+1:end);
 save('data.mat', 'U', 'v')
 fprintf('Data is generated\n');
 end
+% exit;

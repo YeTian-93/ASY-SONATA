@@ -1,4 +1,4 @@
-function directed_graph_generator(I, N_outneighbor)
+function [C, R, Adj] = directed_graph_generator(I, N_outneighbor)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % This code generates a directed graph.
 % 
@@ -28,4 +28,4 @@ end
 C = (Adj+eye(I)) * diag(1./sum(Adj+eye(I)));
 R = diag(1./sum(Adj+eye(I), 2)) * (Adj+eye(I));
 fprintf('The directed graph is generated.\n');
-save('directed_graph.mat', 'C', 'R', 'Adj')
+% save('directed_graph.mat', 'C', 'R', 'Adj')

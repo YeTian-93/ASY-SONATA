@@ -1,14 +1,12 @@
 function Err = AsySubPush(C, step)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This code describes our algorithm--ASYSONATA.
+% This code describes the algorithm--AsySubPush in [1].
 %
 % C:          column stochastic weight matrix;
-% R:          row stochastic weight matrix;
-% step:       step size gamma;
-% eps:        parameter for designing dimishing step size; set to 0 for
-%             constant step size;
-% isWithAux:  logical value--true if the auxiliary variable phi is invoked
-%             and false otherwise
+% step:       step size;
+% --------reference-------
+% [1] Assran, Mahmoud, and Michael Rabbat. "Asynchronous subgradient-push."
+%     arXiv preprint arXiv:1803.08950 (2018).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 global U v col MaxTravelTime Niter act_list X0 Num_Nodes Adj
 

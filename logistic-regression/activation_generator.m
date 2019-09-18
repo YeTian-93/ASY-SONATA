@@ -28,11 +28,11 @@ switch Activate_Mode
                 % length not less than Num_Nodes and not greater than
                 % time_window.  In a rd, every agent appears at least once.
                 
-                len_rd                 = randi([Num_Nodes, time_window]);
-                rd                     = zeros(1, len_rd);
-                rd(1:Num_Nodes)        = 1:Num_Nodes;
+                len_rd          = randi([Num_Nodes, time_window]);
+                rd              = zeros(1, len_rd);
+                rd(1:Num_Nodes) = 1:Num_Nodes;
                 rd(Num_Nodes+1:len_rd) = randi(Num_Nodes,1,len_rd-Num_Nodes);                
-                rd                     = rd(randperm(len_rd)); % random sorting
+                rd              = rd(randperm(len_rd)); % random sorting
                 
             elseif p == len_rd
                 % Now we are at the end of a rd.  We need to set the

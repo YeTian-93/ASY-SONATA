@@ -33,10 +33,10 @@ F_value  = zeros(N,1);
 F_desc   = zeros(N-1,1);
 
 for k = 1:N
-    g           = grad(U_stack, v_stack, x, row*Num_Nodes);
+    g           = grad(U_stack, v_stack, x);
     x           = x - step_size * g;
     gradnorm(k) = norm(g);
-    F_value(k)  = F(U_stack, v_stack, x, row*Num_Nodes);
+    F_value(k)  = F(U_stack, v_stack, x);
     if k > 1
         F_desc(k-1) = abs(F_value(k-1) - F_value(k));
     end

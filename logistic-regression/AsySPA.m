@@ -1,14 +1,13 @@
 function Err = AsySPA(C, rho)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This code describes our algorithm--ASYSONATA.
+% This code describes the algorithm--AsySPA in [1].
 %
 % C:          column stochastic weight matrix;
-% R:          row stochastic weight matrix;
-% step:       step size gamma;
-% eps:        parameter for designing dimishing step size; set to 0 for
-%             constant step size;
-% isWithAux:  logical value--true if the auxiliary variable phi is invoked
-%             and false otherwise
+% rho:        the sequence of local step sizes;
+% --------reference-------
+% [1] Zhang, Jiaqi, and Keyou You. "Asyspa: An exact asynchronous algorithm
+%     for convex optimization over digraphs." IEEE Transactions on 
+%     Automatic Control (2019).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 global U v col MaxTravelTime Niter act_list X0 Num_Nodes Adj
 

@@ -1,6 +1,6 @@
 function Err = ASYSONATA(C, R, step, eps, isWithAux)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This code describes our algorithm--ASYSONATA.
+% This code describes our algorithm--ASYSONATA in [1].
 %
 % C:          column stochastic weight matrix;
 % R:          row stochastic weight matrix;
@@ -9,6 +9,10 @@ function Err = ASYSONATA(C, R, step, eps, isWithAux)
 %             constant step size;
 % isWithAux:  logical value--true if the auxiliary variable phi is invoked
 %             and false otherwise
+% --------reference-------
+% [1] Tian, Ye, Ying Sun, and Gesualdo Scutari. "Achieving Linear 
+%     Convergence in Distributed Asynchronous Multi-agent Optimization." 
+%     arXiv preprint arXiv:1803.10359 (2018).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 global U v col MaxTravelTime Niter act_list X0 Num_Nodes Adj
 
