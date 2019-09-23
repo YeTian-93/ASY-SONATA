@@ -19,10 +19,8 @@ Num_trials        = 20;
 
 %%%% Problem data generation %%%%
 % data_generator(Num_Nodes);
-% directed_graph_generator(Num_Nodes, Num_outneighbor);
-% ------The user can use the above two lines to generate data and network.
+% ------The user can use the above line to generate data.
 load data.mat
-% load directed_graph.mat
 
 %%%% Initializations %%%%
 ASYSONATA_stack        = zeros(Num_trials, Niter+1);
