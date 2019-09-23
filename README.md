@@ -8,7 +8,7 @@ Suppose $T_{ij}^k$ is the traveling time of a packet sent from agent $j$ at virt
 
 
 
-Please check each folder for the
+> Please check each folder for the
 
 
 ## Reference:
