@@ -8,9 +8,8 @@ This is the MATLAB code for simulating ASY-SONATA.  The simulation consists of t
 
 Agents wake up according to an activation list.  An agent will send out information to all its out-neighbors immediately after it finishes its own local update.  Suppose $T_{ij}^k$ is the traveling time of a packet sent from agent $j$ at the virtual global iteration $k$.  The packet will not be available to $i$ until the virtual global iteration $k+T_{ij}^k.$  Every agent always uses the most recently generated information from its in-neighbors out of those available.  
 
-
-
-> Please check each folder for the
+### directed graphs:
+> We first generate a directed cycle to guarantee strong connectivity.  Then we randomly add another $Num_outneighbor-1$ out-neighbors for each node with user-specified <Num_outneighbor>.  One row-stochastic weight matrix and one column-stochastic weight matrix are generated using uniform weights.  
 
 
 ## Reference:
