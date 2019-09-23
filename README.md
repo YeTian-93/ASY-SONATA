@@ -14,7 +14,9 @@ Agents wake up according to an activation list.  An agent will send out informat
 ### data:
 > We described in our paper the process of data generation for each problem.  Please check [ASYSONATA](https://arxiv.org/pdf/1803.10359.pdf).
 
-Each folder contains codes for the specific problem.  Please contact me via _tian110@purdue.edu_ for any question.  Enjoy!
+
+
+Each folder contains codes for the specific problem.  Inside each folder, the main function is validate.m.  Please contact me via _tian110@purdue.edu_ for any question.  Enjoy!
 
 
 ## Reference:
