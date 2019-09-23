@@ -12,7 +12,7 @@ Agents wake up according to an activation list.  An agent will send out informat
 > We first generate a directed cycle to guarantee strong connectivity.  Then we randomly add another $Num_outneighbor-1$ out-neighbors for each node with user-specified $Num_outneighbor$.  One row-stochastic weight matrix and one column-stochastic weight matrix are generated using uniform weights.  
 
 ### data:
-> We described in our paper the process of data generation for each problem.  Please check [ASYSONATA](https://arxiv.org/pdf/1803.10359.pdf).
+> We described in our paper the process of data generation for each problem.  Please check [ASY-SONATA](https://arxiv.org/pdf/1803.10359.pdf).
 
 
 
