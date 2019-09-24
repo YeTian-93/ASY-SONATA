@@ -65,9 +65,7 @@ for k = 1:Niter
             time_list   = T_arrive(i_k,j,1:Lic(j));
             list_arrive = find(time_list<=k & time_list>0);
             if ~isempty(list_arrive)
-                %             while k < T_arrive(i_k,j,t)
-                %                 t = t - 1;
-                %             end
+                
                 t = list_arrive(end);
                 new_X = new_X + R(i_k,j)*V(:,j,t);
                 

@@ -50,12 +50,6 @@ for k = 1:Niter
             time_list = T_arrive(i_k, j, 1:Lic(j)-1);
             unused_pac  = find(time_list <= k & time_list > 0);
             
-%             if i_k == 2 && j == 20
-%                 fprintf(['at global iteration ', num2str(k), ', ',...
-%                     'unused_pac from ', num2str(j), ' to ', num2str(i_k), ' is\n'])
-%                 disp(unused_pac)
-%             end
-            
             [num_arrive, ~] = size(unused_pac);
             for p = 1:num_arrive
                 X(:,i_k) = X(:,i_k) + C(i_k,j) * V_h(:, j, unused_pac(p));
@@ -73,14 +67,7 @@ for k = 1:Niter
             % i_k sends packets to its outneighbors.  Note that the packet 
             % being sent now is associated with Lic(i_k)-1.
             T_arrive(j,i_k,Lic(i_k)-1) = randi([1,MaxTravelTime]) + k;
-            
-%             if i_k == 20 && j == 2
-%                 fprintf(['at global iteration ', num2str(k), ', ',...
-%                     'the ', num2str(Lic(i_k)), '-th pac sent from ', ...
-%                     num2str(i_k), ' to ', num2str(j), ' will arrive by\n'])
-%                 disp(T_arrive(j,i_k,Lic(i_k)))
-%             end
-            
+                        
         end
     end
     Z(:,i_k) = X(:,i_k) / y_h(i_k, Lic(i_k));
